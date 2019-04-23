@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>supp prod</title>
+	<script type="text/javascript">
+    function verif()
+    {
+      var i=0;
+      if(f1.codeProd.value=="")
+      {
+        alert("saisir votre code de produit");
+        i--;
+        return false;
+      }
+      if(i==1)
+      {
+        return true;
+      }
+    }
+
+    </script>
+</head>
+<body>
+<fieldset >
+      <form name="f1"  method="POST" action="sprod.php" onSubmit="return verif()" >
+<center><legend><h2> Supprimer Produit </h2></legend></center>
+         <table id="example1" class="table table-striped">
+          <tr>
+            <th> Code Produit   </th>
+            <th><input type="number" name="codeProd" value=""/></th>
+          </tr>
+           
+        </table>
+       <center>
+        <td><button type="submit" name="Supprimer" value="Supprimer" class="btn btn-danger">Supprimer</button></td>
+      </center>
+      </form>
+    </fieldset>
+</body>
+</html>

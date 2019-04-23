@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modifier stock</title>
+	<script type="text/javascript">
+    function verif()
+    {
+      var i=0;
+      if(f1.quantite.value=="")
+      {
+        alert("saisir votre quantite");
+        i--;
+        return false;
+      }
+      if(f1.unite.value=="")
+      {
+        alert("saisir votre unite");
+        i--;
+        return false;
+      }
+      if(f1.description.value=="")
+      {
+        alert("saisir votre description");
+        i--;
+        return false;
+      }
+      if(f1.codeprod.value=="")
+      {
+        alert("saisir votre code de produit");
+        i--;
+        return false;
+      }
+      if(i==2)
+      {
+        return true;
+      }
+    }
+
+    </script>
+</head>
+<body>
+<fieldset >
+      <p><img src="" width=""></p>
+      <form name="f1"  method="POST" action="mstock.php" onSubmit="return verif()">
+        <center><legend><h2>Modifier Stock</h2></legend></center>
+          <table id="example1" class="table table-striped">
+          <tr>
+            <th> Quantite </th>
+            <th><input type="number" name="quantite" value=""/></th>
+          </tr>
+          <tr>
+            <th> unite </th>
+            <th><input type="number" name="unite" value=""/></th>
+          </tr>
+          <tr>
+            <th> description </th>
+            <th><input type="text" name="description" value=""/></th>
+          </tr>
+          <tr>
+          <th> Code Produit </th>
+          <th><input type="number" name="codeprod" value=""/></th>
+        </tr>
+        </table>
+        <br>
+        <center>
+        <td><button type="submit" name="Modifier" value="Modifier" class="btn btn-danger">Modifier</button></td>
+      </center>
+      </form>
+    </fieldset>
+</body>
+</html>

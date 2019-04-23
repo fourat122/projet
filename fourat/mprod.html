@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modifier prod</title>
+	<script type="text/javascript">
+    function verif()
+    {
+      var i=0;
+      if(f1.codeProd.value=="")
+      {
+        alert("saisir votre code de produit");
+        i--;
+        return false;
+      }
+      if(f1.marque.value=="")
+      {
+        alert("saisir votre marque");
+        i--;
+        return false;
+      }
+      if(f1.couleur.value=="")
+      {
+        alert("saisir votre couleur");
+        i--;
+        return false;
+      }
+      if(f1.typee.value=="")
+      {
+        alert("saisir votre type");
+        i--;
+        return false;
+      }
+      if(f1.dateC.value=="")
+      {
+        alert("saisir votre date de Creation");
+        i--;
+        return false;
+      }
+      if(i==5)
+      {
+        return true;
+      }
+    }
+
+    </script>
+</head>
+<body>
+<fieldset >
+      <form name="f1"  method="POST" action="mprod.php" onSubmit="return verif()" >
+ <center><legend><h2> Modifier Produit </h2></legend></center>
+         <table id="example1" class="table table-striped">
+          <tr>
+            <th> Code Produit </th>
+            <th><input type="number" name="codeProd" value=""/></th>
+          </tr>
+          <tr>
+          <th> Marque </th>
+          <th><input type="text" name="marque" value=""/></th>
+        </tr>
+        <tr>
+            <th> Couleur </th>
+            <th><input type="text" name="couleur" value=""/></th>
+          </tr>
+          <tr>
+            <th> Type </th>
+            <th><input type="text" name="typee" value=""/></th>
+          </tr>
+          <tr>
+            <th> Date Creation  </th>
+            <th><input type="date" name="dateC" value=""/></th>
+          </tr>
+       
+        </table>
+        <center>
+        <td><button type="submit" name="Modifier" value="Modifier" class="btn btn-danger">Modifier</button></td>
+      </center>
+      </form>
+    </fieldset>
+</body>
+</html>
